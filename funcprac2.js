@@ -43,13 +43,14 @@
 // 	return str
 // }
 
-var printObject = function(a, b){
-	var obj = {a:b}
-		// obj[a]=b
-	
-	return obj;
+function printObject(o) {
+  var out = '';
+  for (var p in o) {
+    out += p + ' is ' + o[p] + '\n';
+  }
+  return out;
 }
-// ====================================================COMEBACK TO THIS==============
+
 
 // var vowels = function(str){
 // 	vowelArray = []
@@ -75,13 +76,44 @@ var printObject = function(a, b){
 // }
 
 // var twins = function(arr){
-// 	arr = []
-// 	for (var i =0; i<arr.length; i++){
-// 		if (arr[i] === arr[i]-1 || arr[i] === arr[i]+1){
-// 			return true
-// 		}
-// 		else{
-// 		 return false
+// 	var firstArray = []
+// 	var secondArray = []
+// 	for (var i=0; i<arr.length; i+=2){
+// 		firstArray.push(arr[i])
+
+// 	}
+// 	for (var j=1; j<arr.length; j+=2){
+// 		secondArray.push(arr[j])
+// 	}
+// 	if (firstArray.join("") === secondArray.join("")){
+// 		return true
+// 	}
+// 	else{
+// 		return false
 // 	}
 // }
+// var or = function(arr){
+// 	var check
+// 	for (var i =0; i<arr.length; i++){
+// 		if (arr[i] === true){
+// 			check = true
+// 		}
+// 	}
+// 	if(check === undefined){
+// 		check = false
+// 	}
+// 	return check 
+// }
+// var unique = function(namesArray){
+//     var namesObj = {}
+//     namesArray.forEach(function(element){
+//         namesObj[element] = element
+//     })
+//     // console.log(namesObj)
+//     var output = []
+//     // this creates a variable called key. be sure to use var!
+//     for ( var key in namesObj ) {
+//         output.push(key)
+//     }
+//     return output
 // }
